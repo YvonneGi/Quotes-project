@@ -3,7 +3,7 @@ export class Quote {
   // name: string;
   // author: string;
   showAuthor: boolean;
-  constructor(public id: number,public name: string,public author: string){
+  constructor(public id: number,public name: string,public author: string,public completeDate: Date){
     this.showAuthor=false;
   }
 }

@@ -1,4 +1,5 @@
 <!-- <p>quote-author works!</p> -->
-<p>
-  {{quote.author}}
-</p>
+
+<p>{{quote.author}}</p>
+<p>This quote will be complete in {{quote.completeDate|dateCount}} days</p>
+<button (click)= 'voteGoal(true)'>Up Vote</button>
