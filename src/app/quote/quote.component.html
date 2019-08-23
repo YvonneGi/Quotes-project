@@ -1,12 +1,24 @@
 <!-- <p>quote works!</p> -->
-<div>
+<div class=container>
   <h1>Motivational Quotes</h1>
   <br>
   <ul>
-    <div *ngFor='let quote of quotes;let i = index'>
-      <li>{{quote.name}}due on {{quote.completeDate|date|uppercase}}</li>
-      <button (click)='toggleAuthor(i)'>Show Author</button>
-      <app-quote-author *ngIf='quote.showAuthor' [quote]='quote' (isVoted) = 'quoteVoted($event,i)'></app-quote-author>
+    <div class="row">
+      <div class="col-md-6">
+        <div *ngFor='let quote of quotes;let i = index'>
+          <div>
+            <li>{{quote.name}}due on {{quote.completeDate|date|uppercase}}</li>
+            <button (click)='toggleAuthor(i)'>Show Author</button>
+          </div>
+          <div *ngIf='quote.showAuthor'>
+           <app-quote-author *ngIf='quote.showAuthor' [quote]='quote' (isVoted)='quoteVoted($event,i)'>
+           </app-quote-author>
+          </div>
+      </div>
     </div>
+    <div class="col-md-6">
+        <app-add-quote></app-add-quote>
+      </div>
+  </div>
   </ul>
 </div>
