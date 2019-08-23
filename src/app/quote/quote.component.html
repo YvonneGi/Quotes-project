@@ -1,0 +1,12 @@
+<!-- <p>quote works!</p> -->
+<div>
+  <h1>Motivational Quotes</h1>
+  <br>
+  <ul>
+    <div *ngFor='let quote of quotes;let i = index'>
+      <li>{{quote.name}}</li>
+      <button (click)='toggleAuthor(i)'>Show Author</button>
+      <app-quote-author *ngIf='quote.showAuthor' [quote]='quote'></app-quote-author>
+    </div>
+  </ul>
+</div>
