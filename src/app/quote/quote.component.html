@@ -1,23 +1,23 @@
-<div class=container>
+<div class="container">
   <h1>Motivational Quotes</h1>
   <br>
-  <ul>
-    <div class="row">
+  <div class="row">
+    <ul>
       <div class="col-md-6">
         <div *ngFor='let quote of quotes;let i = index'>
           <div>
             <li>{{quote.name}}<br>due on {{quote.completeDate|date|uppercase}}</li>
-            <button (click)='toggleAuthor(i)'>Show Author</button>
+            <button (click)='toggleAuthor(i)' class="btn btn-success">Show Author</button>
           </div>
           <div *ngIf='quote.showAuthor'>
            <app-quote-author *ngIf='quote.showAuthor' [quote]='quote' (isVoted)='quoteVoted($event,i)'>
            </app-quote-author>
-          </div>
+        </div>
       </div>
     </div>
-    <div class="col-md-6">
+      <div class="col-md-6">
         <app-add-quote (addQuote)="addNewQuote($event)"></app-add-quote>
       </div>
+    </ul>
   </div>
-  </ul>
 </div>
