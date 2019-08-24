@@ -1,14 +1,14 @@
 <div class="container-fluid">
     <h2 class="text-center">Add a new Quote</h2>
     <hr>
-    <form #addQuote='ngForm'>  
+    <form (ngSubmit)='submitQuote()' #addQuote='ngForm'>  
         <div class="form-group">
   
             <label for="quote">Quote</label>
             <textarea  type="text"class="form-control" id="quote" row="4" [(ngModel)]="newQuote.name" #name='ngModel' name="name"  required >
             </textarea>
             <div [hidden]="name.valid || name.pristine" class="alert alert-danger">
-                <p>Name of the quote is required</p>
+                <p>The quote is required</p>
             </div>
             
             <!-- Display {{newQuote.name}} -->
