@@ -1,26 +1,24 @@
 <div class="container-fluide">
-    <div class="jumbotron" style="background-color:black;">
-        <div style="text-align:center">
-    <h1 style="color: rgb(190, 172, 65);">Welcome to Quotes!</h1> 
-  </div> <br><br><br> 
-  <div class="row">
-    
+  <div class="jumbotron" style="background-color:black;">
+    <div style="text-align:center">
+      <h1 style="color: rgb(190, 172, 65);">Welcome to Quotes!</h1>
+    </div> <br><br><br>
+    <div class="row">
       <div class="col-md-8">
-      <img width="300" height="100"  alt="Quotes Logo"
-        src="https://pbs.twimg.com/profile_images/550627071265755138/6XXvRX1R.png">
-      <hr>
-      <ul>
-        <li *ngFor='let quote of quotes'>
-          {{quote.name}}
-        </li>
-      </ul>
+        <img width="300" height="100" alt="Quotes Logo"
+          src="https://pbs.twimg.com/profile_images/550627071265755138/6XXvRX1R.png">
+        <ul>
+          <li *ngFor='let quote of quotes'>
+            {{quote.name}}
+          </li>
+        </ul>
+      </div>
+      <div class="col-md-4">
+        <p style="color: rgb(190, 172, 65)"><em> Hi,here you can found a list of motivational quotes written by
+            different authors,<br>
+            fill free to add your own quotes or even other motivational quotes you may know.</em> </p>
+      </div>
     </div>
-    <div class="col-md-4">
-      <p style="color: rgb(190, 172, 65)"><em> Hi,here you can found a list of motivational quotes written by different authors,<br>
-      fill free to add your own quotes or even other motivational quotes you may know.</em> </p>
-    </div>
-    
-  
-</div>
+  </div>
 </div>
 <app-quote></app-quote>
