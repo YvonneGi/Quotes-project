@@ -6,7 +6,7 @@ import { Directive, ElementRef, HostListener } from '@angular/core';
 export class HighlightDirective {
 
   constructor(private elem: ElementRef) { }
-  @HostListener("click") onClicks() {
+  @HostListener("click") onClicks(){
     this.bkground("red")
   }
 
