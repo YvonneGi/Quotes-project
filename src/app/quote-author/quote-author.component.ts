@@ -1,4 +1,4 @@
-import { Component, OnInit,Input,Output,EventEmitter } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { Quote } from '../quote'
 
 @Component({
@@ -9,19 +9,9 @@ import { Quote } from '../quote'
 export class QuoteAuthorComponent implements OnInit {
   @Input() quote: Quote;
   @Output() isComplete = new EventEmitter<boolean>();
-  quoteDelete(complete:boolean){
+  quoteDelete(complete: boolean) {
     this.isComplete.emit(complete);
   }
-  // deleteQuote(isVoted, index){
-  //   if (isVoted) {
-  //     let toVote = confirm(``)
-
-  //     if (toVote){
-  //       this.quote.count(index,+1)
-  //     }
-  //   }
-  // }
-
   constructor() { }
 
   ngOnInit() {

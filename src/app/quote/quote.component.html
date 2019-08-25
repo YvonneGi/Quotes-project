@@ -1,5 +1,5 @@
 <div class="container">
-  <h1>Motivational Quotes</h1>
+  <h1><strong>Motivational Quotes</strong></h1>
   <br>
   <div class="row">
     <ul>
@@ -10,12 +10,10 @@
             <button (click)='toggleAuthor(i)' class="btn btn-success">Show Details</button>
           </div>
           <div *ngIf='quote.showAuthor'>
-           <!-- <app-quote-author *ngIf='quote.showAuthor' [quote]='quote' (isVoted)='quoteVoted($event,i)'>
-           </app-quote-author> -->
-           <app-quote-author  [quote]='quote' (isComplete) = 'deleteQuote($event,i)'></app-quote-author>
+            <app-quote-author [quote]='quote' (isComplete)='deleteQuote($event,i)'></app-quote-author>
+          </div>
         </div>
       </div>
-    </div>
       <div class="col-md-6">
         <app-add-quote (addQuote)="addNewQuote($event)"></app-add-quote>
       </div>
