@@ -1,22 +1,23 @@
 <div class="container">
-  <h1><strong>Motivational Quotes</strong></h1>
-  <br>
+  <h1 class="text-center"><strong>Motivational Quotes</strong></h1>
+  <br><br><br>
+  <h2><strong>List of Quotes</strong></h2><br>
   <div class="row">
-    <ul>
-      <div class="col-md-6">
-        <div *ngFor='let quote of quotes;let i = index'>
-          <div>
-            <li>{{quote.name}}<br></li>
-            <button (click)='toggleAuthor(i)' class="btn btn-success">Show Details</button>
-          </div>
-          <div *ngIf='quote.showAuthor'>
-            <app-quote-author [quote]='quote' (isComplete)='deleteQuote($event,i)'></app-quote-author>
-          </div>
+    <div class="col-md-8">
+      <div *ngFor='let quote of quotes;let i = index'>
+        <div>
+          <ul>
+            <li>{{quote.name}}</li>
+          </ul>
+          <button (click)='toggleAuthor(i)' class="btn btn-success">Show Details</button>
+        </div>
+        <div *ngIf='quote.showAuthor'>
+          <app-quote-author [quote]='quote' (isComplete)='deleteQuote($event,i)'></app-quote-author>
         </div>
       </div>
-      <div class="col-md-6">
-        <app-add-quote (addQuote)="addNewQuote($event)"></app-add-quote>
-      </div>
-    </ul>
+    </div>
+    <div class="col-md-4">
+      <app-add-quote (addQuote)="addNewQuote($event)"></app-add-quote>
+    </div>
   </div>
 </div>
