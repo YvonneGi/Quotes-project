@@ -9,6 +9,7 @@ import { QuoteAuthorComponent } from './quote-author/quote-author.component';
 import { AddQuoteComponent } from './add-quote/add-quote.component';
 import { DateCountPipe } from './date-count.pipe';
 import { from } from 'rxjs';
+import { VoteComponent } from './vote/vote.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { from } from 'rxjs';
     QuoteComponent,
     QuoteAuthorComponent,
     AddQuoteComponent,
-    DateCountPipe
+    DateCountPipe,
+    VoteComponent
   ],
   imports: [
     BrowserModule,

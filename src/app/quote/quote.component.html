@@ -6,12 +6,13 @@
       <div class="col-md-6">
         <div *ngFor='let quote of quotes;let i = index'>
           <div>
-            <li>{{quote.name}}<br>due on {{quote.completeDate|date|uppercase}}</li>
-            <button (click)='toggleAuthor(i)' class="btn btn-success">Show Author</button>
+            <li>{{quote.name}}<br></li>
+            <button (click)='toggleAuthor(i)' class="btn btn-success">Show Details</button>
           </div>
           <div *ngIf='quote.showAuthor'>
-           <app-quote-author *ngIf='quote.showAuthor' [quote]='quote' (isVoted)='quoteVoted($event,i)'>
-           </app-quote-author>
+           <!-- <app-quote-author *ngIf='quote.showAuthor' [quote]='quote' (isVoted)='quoteVoted($event,i)'>
+           </app-quote-author> -->
+           <app-quote-author  [quote]='quote' (isComplete) = 'deleteQuote($event,i)'></app-quote-author>
         </div>
       </div>
     </div>

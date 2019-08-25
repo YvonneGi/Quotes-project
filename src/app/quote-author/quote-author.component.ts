@@ -8,11 +8,19 @@ import { Quote } from '../quote'
 })
 export class QuoteAuthorComponent implements OnInit {
   @Input() quote: Quote;
-  @Output() isVoted = new EventEmitter<boolean>();
-
-  quoteVoted(vote:boolean){
-    this.isVoted.emit(vote);
+  @Output() isComplete = new EventEmitter<boolean>();
+  quoteDelete(complete:boolean){
+    this.isComplete.emit(complete);
   }
+  // deleteQuote(isVoted, index){
+  //   if (isVoted) {
+  //     let toVote = confirm(``)
+
+  //     if (toVote){
+  //       this.quote.count(index,+1)
+  //     }
+  //   }
+  // }
 
   constructor() { }
 

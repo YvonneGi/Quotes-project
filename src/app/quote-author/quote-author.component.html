@@ -1,5 +1,20 @@
 <!-- <p>quote-author works!</p> -->
+<ul>
+  <li>
+    <p><em><strong>said by {{quote.author}}</strong></em></p>
+  </li>
+  <li>
+    <p><em><strong>on {{quote.completeDate|date|uppercase}}</strong></em></p>
+  </li>
+  <li>
+    <p><em><strong>Published by {{quote.publisher}}</strong></em></p>
+  </li>
+  <li>
+    <p><em><strong>It is published in {{quote.completeDate|dateCount}} days</strong></em></p>
+  </li>
 
-<p>{{quote.author}}</p>
-<p>This quote will be complete in {{quote.completeDate|dateCount}} days</p>
-<button (click)= 'voteGoal(true)'>Up Vote</button>
+</ul>
+<!-- <button (click)='voteGoal(true)'>Delete Quote</button> -->
+<button (click)= 'quoteDelete(true)' class="btn btn-outline-danger">Delete Quote</button>
+<br><br>
+<app-vote></app-vote>

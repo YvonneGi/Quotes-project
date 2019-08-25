@@ -1,17 +1,18 @@
 <div class="container-fluid">
-<div class="jumbutron">
-<div style="text-align:center">
-  <h1>
-    Welcome to Quotes!
-  </h1>
-  <img width="200" alt="Quotes Logo" src="https://www.quotemaster.org/images/c6/c63637710ffc1951c38efe94c87554ce.jpeg">
-  <hr>
-  <ul>
-    <li *ngFor='let quote of quotes'>
-      {{quote.name}}
-    </li>
-  </ul>
-</div>
-</div>
+  <div class="jumbutron">
+    <div style="text-align:center">
+      <h1>
+        Welcome to Quotes!
+      </h1>
+      <img width="200" alt="Quotes Logo"
+        src="https://www.quotemaster.org/images/c6/c63637710ffc1951c38efe94c87554ce.jpeg">
+      <hr>
+      <ul>
+        <li *ngFor='let quote of quotes'>
+          {{quote.name}}
+        </li>
+      </ul>
+    </div>
+  </div>
 </div>
 <app-quote></app-quote>
