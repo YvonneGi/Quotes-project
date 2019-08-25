@@ -7,7 +7,7 @@
       <div *ngFor='let quote of quotes;let i = index'>
         <div>
           <ul>
-            <li>{{quote.name}}</li>
+            <li appHighlight>{{quote.name}}</li>
           </ul>
           <button (click)='toggleAuthor(i)' class="btn btn-success">Show Details</button>
         </div>

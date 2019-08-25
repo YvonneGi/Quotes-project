@@ -10,6 +10,8 @@ import { AddQuoteComponent } from './add-quote/add-quote.component';
 import { DateCountPipe } from './date-count.pipe';
 import { from } from 'rxjs';
 import { VoteComponent } from './vote/vote.component';
+import { HighlightDirective } from './highlight.directive';
+// import { ChangeThemeDirective } from './highlight.directive';
 
 @NgModule({
   declarations: [
@@ -18,7 +20,9 @@ import { VoteComponent } from './vote/vote.component';
     QuoteAuthorComponent,
     AddQuoteComponent,
     DateCountPipe,
-    VoteComponent
+    VoteComponent,
+    HighlightDirective
+    // ChangeThemeDirective
   ],
   imports: [
     BrowserModule,

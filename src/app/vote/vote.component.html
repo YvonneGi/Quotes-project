@@ -1,4 +1,5 @@
 <p>
-  <button (click)= 'upvote()' class="btn btn-info">Upvote</button>
-  <button (click)= 'downvote()' class="btn btn-primary">Downvote</button></p>
-  <p>{{uvoted}}                               {{dvoted}}</p>
+  <button style="margin:5px;" (click)='upvote()' class="btn btn-info">Upvote {{uvoted}}</button>
+
+  <button style="margin:5px;" (click)='downvote()' class="btn btn-primary">Downvote {{dvoted}}</button>
+</p>
