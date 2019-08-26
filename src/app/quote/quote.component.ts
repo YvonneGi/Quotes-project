@@ -7,7 +7,7 @@ import { Quote } from '../quote';
   styleUrls: ['./quote.component.css']
 })
 export class QuoteComponent implements OnInit {
-  quotes: Quote[] = [
+  quotes= [
     new Quote(1, 'The only way to do great things is to love what you do.', 'Steve Jobs.', 'Yvonne', new Date(2018, 3, 14)),
     new Quote(2, 'Dont worry about rejection all you need is one person to say yes.', 'Jay Shetty', 'Yvonne', new Date(2018, 6, 9)),
     new Quote(3, 'Try to be rainbow in someones cloud.', 'Maya Angelou', 'Yvonne', new Date(2019, 1, 12)),
