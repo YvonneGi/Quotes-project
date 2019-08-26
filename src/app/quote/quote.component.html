@@ -9,7 +9,7 @@
           <ul>
             <li appHighlight>{{quote.name}}</li>
           </ul>
-           <p *ngIf='quotes.length > 10'>You have too many votes</p>
+           <!-- <p *ngIf='quotes.length > 10'>You have too many votes</p> -->
           <button (click)='toggleAuthor(i)' class="btn btn-success">Show Details</button>
         </div>
         <div *ngIf='quote.showAuthor'>
